@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
 }
 
 html body input {
@@ -12,73 +13,99 @@ html body input {
   font-size: 62.5%;
 }
 
-body{
-  max-width: 144rem;
-  margin: 0 auto;
+.page {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  height: 100%;
+}
+
+.container {
+  padding: 1.6rem 24rem;
 }
 
 header {
   display: flex;
-  gap: 4rem;
-  background-color: #065E7C;
   align-items: center;
-  padding: 1.8rem 11.2rem;
-}
-
-header .input-wrapper {
-  width: 100vh;
+  gap: 4.2rem;
+  padding: 1.2rem 11.2rem;
+  background-color: #065E7C;
 }
 
 header img {
-  background-color: #F4FCFF;
-  width: 4.2rem;
+  background-color: #FFF;
+  padding: .8rem;
   border-radius: 50%;
 }
 
-header img:first-child {
-  width: 2.4rem;
-  height: 2.4rem;
-  padding: 0.8rem;
-  object-fit: cover;
+header form {
+  flex: 1;
 }
 
-header form {
+main {
+  display: flex;
+  margin-top: 3.2rem;
+  gap: 4rem;
+}
+
+main p {
+  font-size: 1.6rem;
+  line-height: 160%;
+}
+
+main span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.main-container{
   display: flex;
   flex-direction: column;
-}
-
-form label {
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-}
-
-form input {
-  border-radius: 0.4rem;
-  background: rgba(255, 255, 255, 0.20);
-  padding: 1.2rem 0rem 1.2rem 1.4rem;
-  border: none;
-  font-size: 1.6rem;
-  width: 100%;
-  
-}
-
-form input::placeholder {
-  color: #FFFFFF;
-  text-align: center;
+  gap: 3.2rem;
+  max-width: 80rem;
 }
 
 .img-center {
   width: auto;
   height: auto;
-  max-width: 80rem;
-  max-height: 40rem;
-  object-fit: cover;
+  width: 80rem;
+  height: 40rem;
+  border-radius: .5rem;
+}
 
+.avaliation {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem 0;
+}
+
+.avaliation img {
+  background-color: #065E7C;
+  padding: 1.2rem;
+  border-radius: 50%;
+}
+
+.articles {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.articles article {
+  max-width: 15rem;
+  font-size: 1.2rem;
+}
+
+footer {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #fff ;
+  padding: 3.2rem 1.6rem;
+  background-color: #387E96;
 }
 
 
+
+
+/*
 @media (max-width: 43rem) {
 
   html body input {
