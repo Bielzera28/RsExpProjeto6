@@ -21,19 +21,27 @@ html body input {
 
 .container {
   padding: 1.6rem 24rem;
+  
 }
 
 header {
   display: flex;
   align-items: center;
   gap: 4.2rem;
-  padding: 1.2rem 11.2rem;
+  padding: 1.2rem 24rem;
   background-color: #065E7C;
 }
 
-header img {
-  background-color: #FFF;
+header .profile-img {
+  width: 4.2rem;
+  height: 4.2rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+header img:first-child {
   padding: .8rem;
+  background-color: #fff;
   border-radius: 50%;
 }
 
@@ -41,10 +49,37 @@ header form {
   flex: 1;
 }
 
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  padding: 1.2rem 1.6rem;
+  background: rgba(255, 255, 255, 0.20);
+  border: 0;
+  border-radius: .4rem;
+}
+
+.input-wrapper input::placeholder {
+  color: #FFF;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
 main {
   display: flex;
   margin-top: 3.2rem;
-  gap: 4rem;
+  gap: 10rem;
+  overflow-y: scroll;
+  
 }
 
 main p {
@@ -60,7 +95,7 @@ main span {
 .main-container{
   display: flex;
   flex-direction: column;
-  gap: 3.2rem;
+  gap: .8rem;
   max-width: 80rem;
 }
 
@@ -70,12 +105,17 @@ main span {
   width: 80rem;
   height: 40rem;
   border-radius: .5rem;
+  object-fit: cover;
 }
 
 .avaliation {
   display: flex;
   justify-content: space-between;
-  padding: 1.6rem 0;
+  padding: 1.6rem 0 0;
+}
+
+.avaliation h1 {
+  font-size: 2.4rem;
 }
 
 .avaliation img {
@@ -84,35 +124,42 @@ main span {
   border-radius: 50%;
 }
 
+.avaliation button {
+  border: none;
+  background-color: #FFF;
+  cursor: pointer;
+}
+
+.avaliation img:hover {
+  background-color: #0786b1;
+}
+
 .articles {
   display: flex;
-  gap: 1.2rem;
+  gap: 1.6rem;
+  margin-top: 3.2rem;
 }
 
 .articles article {
-  max-width: 15rem;
-  font-size: 1.2rem;
+  max-width: 20rem;
+  font-size: 1.5rem;
 }
 
 footer {
   text-align: center;
   font-size: 1.8rem;
   color: #fff ;
-  padding: 3.2rem 1.6rem;
+  padding: 3.2rem 0;
   background-color: #387E96;
 }
 
-
-
-
-/*
 @media (max-width: 43rem) {
 
   html body input {
     font-family: 'Mulish', sans-serif;
   }
 
-  header {
+  .header-container {
     display: flex;
     background-color: #065E7C;
     align-items: center;
@@ -120,27 +167,47 @@ footer {
     padding: 1.8rem 2.8rem;
   }
 
-  header .input-wrapper {
-    width: 100%;
-  }
 
   .img-center {
     width: 100%;
     height: 22rem;
     object-fit: cover;
+    border-radius: 0%;
   }
 
   main {
-    padding: 3.2rem 2.8rem 4rem;
+    padding: 0rem 2.2rem 4rem;
+    margin-top: 0;
+    gap: 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
   }
 
   main h1 {
     font-size: 2.6rem;
   }
 
+  .main-container{
+    padding: 0 2.8rem;
+    padding-bottom: 0;
+  }
+
+  main p {
+    font-size: 1.6rem;
+    line-height: 160%;
+    color: #121214;
+    padding: 1.6rem 0;
+  }
+
   .avaliation {
     display: flex;
+    flex-direction: column;
     gap: 1.2rem;
+
   }
 
   .avaliation img {
@@ -150,17 +217,9 @@ footer {
 
   }
 
-  main p {
-    font-size: 1.8rem;
-    line-height: 160%;
-    color: #121214;
-    padding: 3.2rem 0;
-  }
-  
   .articles {
     display: flex;
     gap: 1.6rem;
-    margin-top: 3.2rem;
   }
 
   .articles span {
@@ -169,7 +228,7 @@ footer {
   }
 
   .articles article {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 160%;
   }
 
@@ -187,9 +246,10 @@ footer {
 
   footer {
     text-align: center;
-    font-size: 1.8rem;
-    color: #fff ;
-    padding: 3.2rem 1.6rem;
+    font-size: 1.6rem;
+    color: #fff;
+    margin-top: 3.2rem;
     background-color: #387E96;
+    padding: 1.6rem 0;
   }
 }
