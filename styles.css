@@ -37,16 +37,22 @@ header .profile-img {
   height: 4.2rem;
   object-fit: cover;
   border-radius: 50%;
+  --startY: -100%;
+  animation: move .4s;
 }
 
 header img:first-child {
   padding: .8rem;
   background-color: #fff;
   border-radius: 50%;
+  --startY: -100%;
+  animation: move .4s;
 }
 
 header form {
   flex: 1;
+  --startY: -100%;
+  animation: move .4s;
 }
 
 .input-wrapper {
@@ -78,8 +84,6 @@ main {
   display: flex;
   margin-top: 3.2rem;
   gap: 10rem;
-  overflow-y: scroll;
-  
 }
 
 main p {
@@ -143,6 +147,24 @@ main span {
 .articles article {
   max-width: 20rem;
   font-size: 1.5rem;
+  animation: appear .4s var(--delay) backwards;
+}
+
+.articles img {
+  display: block;
+  border-radius: .5rem;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-delay: 0s;
+  transition-timing-function: ease-out;
+  cursor: pointer;
+}
+
+.articles img:hover {
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+  transform: scale(1.1) rotate(-2deg);
 }
 
 footer {
@@ -159,7 +181,7 @@ footer {
     font-family: 'Mulish', sans-serif;
   }
 
-  .header-container {
+  header{
     display: flex;
     background-color: #065E7C;
     align-items: center;
@@ -251,5 +273,22 @@ footer {
     margin-top: 3.2rem;
     background-color: #387E96;
     padding: 1.6rem 0;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0%;
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
   }
 }
