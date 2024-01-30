@@ -75,7 +75,7 @@ header form {
 }
 
 .input-wrapper input::placeholder {
-  color: #FFF;
+  color: #387E96;
   font-size: 1.6rem;
   text-align: center;
 }
@@ -136,6 +136,7 @@ main span {
 
 .avaliation img:hover {
   background-color: #0786b1;
+  transform: scale(1.2);
 }
 
 .articles {
